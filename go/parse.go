@@ -2,11 +2,9 @@ package main
 
 import (
   "fmt"
-  // "time"
 )
 
 func parse(id uint32, data []int) {
-  // global DATA from main.go
 
   switch(id) {
     case 0x428:
@@ -17,8 +15,10 @@ func parse(id uint32, data []int) {
       break
 
     case 0x002:
-      // about -5830 for full turn
+      // -5830 for roughly a full turn
       // 5706 the other way full turn
+      // probably /16 to get degrees
+      // 360 degrees = 5760
       fmt.Println("0x002 - Steering angle sensor - steering angle")
       fmt.Println(data)
 
@@ -28,6 +28,9 @@ func parse(id uint32, data []int) {
         steeringAngle = steeringAngle - 0xffff
       }
       fmt.Println(steeringAngle)
+
+      fmt.Print("Steering angle in degrees ")
+      fmt.Println(steeringAngle/16)
 
       checksum := data[2] >> 4
       fmt.Print("checksum ")
