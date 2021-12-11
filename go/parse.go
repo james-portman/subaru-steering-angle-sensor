@@ -40,19 +40,7 @@ func parse(id uint32, data []int) {
       fmt.Print("sequence ")
       fmt.Println(sequence)
 
-      calc_checksum := (data[0] & 0xF)
-      calc_checksum ^= (data[0] >> 4)
-      calc_checksum ^= (data[1] & 0xF)
-      calc_checksum ^= (data[1] >> 4)
-      calc_checksum ^= (data[2] & 0xF) // don't do the checksum nibble too
-      calc_checksum ^= (data[3] & 0xF)
-      calc_checksum ^= (data[3] >> 4)
-      calc_checksum ^= (data[4] & 0xF)
-      calc_checksum ^= (data[4] >> 4)
-      calc_checksum ^= (data[5] & 0xF)
-      calc_checksum ^= (data[5] >> 4)
-      calc_checksum ^= (data[6] & 0xF)
-      calc_checksum ^= (data[6] >> 4)
+      calc_checksum := calculateChecksum(data)
       fmt.Print("calculated checksum ")
       fmt.Println(calc_checksum)
 
@@ -71,4 +59,37 @@ func parse(id uint32, data []int) {
       break
   }
 
+}
+
+func calculateChecksum(data []int) int {
+    calc_checksum := (data[0] & 0xF)
+    calc_checksum ^= (data[0] >> 4)
+    calc_checksum ^= (data[1] & 0xF)
+    calc_checksum ^= (data[1] >> 4)
+    calc_checksum ^= (data[2] & 0xF) // don't do the checksum nibble too
+    calc_checksum ^= (data[3] & 0xF)
+    calc_checksum ^= (data[3] >> 4)
+    calc_checksum ^= (data[4] & 0xF)
+    calc_checksum ^= (data[4] >> 4)
+    calc_checksum ^= (data[5] & 0xF)
+    calc_checksum ^= (data[5] >> 4)
+    calc_checksum ^= (data[6] & 0xF)
+    calc_checksum ^= (data[6] >> 4)
+    return calc_checksum
+}
+func calculateChecksumBytes(data []byte) byte {
+    calc_checksum := (data[0] & 0xF)
+    calc_checksum ^= (data[0] >> 4)
+    calc_checksum ^= (data[1] & 0xF)
+    calc_checksum ^= (data[1] >> 4)
+    calc_checksum ^= (data[2] & 0xF) // don't do the checksum nibble too
+    calc_checksum ^= (data[3] & 0xF)
+    calc_checksum ^= (data[3] >> 4)
+    calc_checksum ^= (data[4] & 0xF)
+    calc_checksum ^= (data[4] >> 4)
+    calc_checksum ^= (data[5] & 0xF)
+    calc_checksum ^= (data[5] >> 4)
+    calc_checksum ^= (data[6] & 0xF)
+    calc_checksum ^= (data[6] >> 4)
+    return calc_checksum & 0xF
 }

@@ -23,7 +23,7 @@ func printout() {
 // main - loop to receive can packets, sends them off for parsing
 func main() {
   go connectLoop()
-  go printout()
+  // go printout()
 
   for { time.Sleep(100 * time.Second) }
 }
@@ -59,6 +59,13 @@ func connect() {
     return
   }
   fmt.Println("CAN: seems connected")
+
+  // following used to simulate ABS and SAS can data
+  go sendSASData(sck)
+  go sendAbs501(sck)
+  go sendAbs513(sck)
+
+
   for {
     id, data, err := sck.Recv() // TODO: does this block? some way to flag to UI we're not receiving?
     if err != nil {
