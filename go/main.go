@@ -61,7 +61,7 @@ func connect() {
   fmt.Println("CAN: seems connected")
 
   // following used to simulate ABS and SAS can data
-  go sendSASData(sck)
+  // go sendSASData(sck)
   go sendAbs501(sck)
   go sendAbs513(sck)
 
