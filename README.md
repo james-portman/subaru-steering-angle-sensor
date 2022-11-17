@@ -4,7 +4,7 @@
 
 This applies to at least Hawkeye era steering angle sensors - vaguely 2006 year cars, it could apply to many more
 
-The sensor in the pictures in this repo is marked V416 Tokai Rika Japan, but this seems to work for all sensors
+The sensor in the pictured in this repo is marked V416 Tokai Rika Japan, but this seems to work for all sensors
 
 This is not for cars which just have a clock spring, I think it may only apply to the A-DCCD cars
 
@@ -39,10 +39,23 @@ On the underside of the PCB it has an eeprom chip marked 93LC66BI - it is a vers
 
 Changing the EEPROM data section near the top of the file from a5a5 5a5a back to ffff ffff cleared the fault, the DCCD module is no longer reporting an error
 
-Other sensors people have sent me to repair have had slightly different fault data in, but it is always a pattern of 2 hex byte repeated, then another 2 of the data bytes with the upper and lower 4 bits swapped, so 5a 5a a5 a5 or 4b 4b b4 b4 for example
+Other sensors people have sent me to repair have had slightly different fault data in, but it is always a pattern of 2 hex byte repeated, then another 2 of the data bytes with the upper and lower 4 bits swapped, so 5a5aa5a5 or 4b4bb4b4 for example
 Wiping these by setting them back to all ff's always seems to work
 
 I would think there might be a way to clear this fault by using a diagnostic cable and sending a certain message to the DCCD module, but I have never seen or heard of a tool that can do this, and Subaru themselves claimed that it is not possible to reset the steering sensors in any way.
+
+## Fixing the fault code
+
+Open up the sensor, use an eeprom programmer and an 8-pin clip for SOIC chips, read the data and save a backup file, if you have a pattern similar to 5a5aa5a5 near the top then change that to all ff's and write that back
+
+Open sensor:
+
+![Opened sensor](/IMG_1857.jpg "An opened steering angle sensor")
+
+Back side of PCB with eeprom chip marked:
+
+![PCB back](/IMG_1860-circled.jpg "PCB back side")
+
 
 ## Further investigation
 
