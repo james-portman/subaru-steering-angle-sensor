@@ -67,3 +67,7 @@ They do differ slightly between different cars
 Otherwise there are at least 2 other pieces of valid data in the sensors which could simply be the steering ratio
 
 I have seen people making complicated add-on systems to correct the steering angle sensor data when they have fitted a steering rack with a different ratio, I would think you can do the same thing here by just editing the steering angle sensor maps to match a sensor from whatever car your rack is made for
+
+Sensor data for 2006 STI Type UK vs 2007 JDM:
+
+![sensor data](/2006-uk-vs-2007-jdm.png "Sensor data graphed")
