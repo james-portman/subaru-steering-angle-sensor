@@ -62,6 +62,7 @@ Back side of PCB with eeprom chip marked:
 Looking at the rest of the data on the steering angle sensor eeprom, it seems like there are two lookup tables
 
 Graphing those it actually looks like a sin and cos wave, although it could be a way to look up the car wheel angle vs steering wheel angle
+They do differ slightly between different cars
 
 Otherwise there are at least 2 other pieces of valid data in the sensors which could simply be the steering ratio
 
