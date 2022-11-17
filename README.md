@@ -4,16 +4,16 @@
 
 This applies to at least Hawkeye era steering angle sensors - vaguely 2006 year cars, it could apply to many more
 
-The sensor in the pictured in this repo is marked V416 Tokai Rika Japan, but this seems to work for all sensors
+The sensor in the pictures in this repo is marked V416 Tokai Rika Japan, but this seems to work for all sensors
 
 This is not for cars which just have a clock spring, I think it may only apply to the A-DCCD cars
 
 
 ## Fault code
 
-It seems like once a sensor has been spun too far one way it flags a permanent fault, in this case fault code P1767 was showing on an apparently otherwise working steering angle sensor
+It seems like once a sensor has been spun too far one way then it flags a permanent fault, in this case fault code P1767 was showing on an apparently otherwise working steering angle sensor
 
-This can happen if you have the steering rack disconnected and connect it back with it spun 360 degrees or more.
+This can happen if you have the steering knucle disconnected and connect it back with the steering wheel spun e.g. 360 degrees out.
 There is gearing and a special pattern inside the sensor so it knows if you go "too far" one way, it might only trigger when you put full lock of steering on, or the car may work it out from the wheel speed sensor data when it sees you are going straight with the wheels but have 360 degrees of steering wheel on
 
 This might be a good thing if the car had been in a crash, so you would know something was extremely bent or damaged for that to happen, but not if it was just an accident after disconneting the steering knuckle
