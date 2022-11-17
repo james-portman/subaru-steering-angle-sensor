@@ -23,8 +23,9 @@ Installing a new sensor fixes this, but it is just a software issue that can be 
 ## Test steering angle sensor
 
 If you use FreeSSM and connect to the DCCD controller you can test your sensor.
-Initially it is normal for the steering sensor value to be strange value like 0 or 4096(?), then once you move the steering wheel it should start to read real values.
-If you can turn the wheel and it seems to get sensible readings that follow with how you are moving the wheel then it is likely that your steering sensor is working fine.
+Initially it is normal for the steering sensor value to be strange value like 2048, then once you move the steering wheel it should start to read real values.
+If you can turn the wheel and it seems to get sensible readings that start around 0 with the wheels straight forward and follow how you are moving the wheel then it is likely that your steering sensor is working fine.
+I think turning the wheel left gives negative values, right gives positive.
 In my case there would not be any fault until I moved the wheel.
 
 ## Technical investigation
