@@ -72,3 +72,7 @@ I have seen people making complicated add-on systems to correct the steering ang
 Sensor data for a mixture of cars:
 
 ![sensor data](/graph.png "Sensor data graphed")
+
+There is actually part of a Bosch datasheet about a different (magnetic) style sensor they make which has the same shape graphs and some explanation:
+
+![bosch maths](/bosch-maths.png "Bosch sensor maths")
