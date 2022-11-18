@@ -1,0 +1,3 @@
+This is a bit messy but I used this to sniff the CAN bus and also to simulate a steering angle sensor and ABS system being connected to a DCCD module
+
+Set up to be used on Linux with a USB-CAN device that shows up as can0

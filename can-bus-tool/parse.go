@@ -7,6 +7,8 @@ import (
 func parse(id uint32, data []int) {
 
   switch(id) {
+
+    // DCCD sends, periodic/keepalive
     case 0x428:
       // the first and last numbers increase then roll to 0
       // they are not (always?) lined up
@@ -14,11 +16,13 @@ func parse(id uint32, data []int) {
       fmt.Println(data)
       break
 
+      // steering angle sensor, sending current sensor angle and status
     case 0x002:
       // -5830 for roughly a full turn
       // 5706 the other way full turn
-      // probably /16 to get degrees
+      // /16 to get degrees
       // 360 degrees = 5760
+      // also correlates with initial startup value of 0x8000 which shows as 2048(d) in freessm
       fmt.Println("0x002 - Steering angle sensor - steering angle")
       fmt.Println(data)
 
