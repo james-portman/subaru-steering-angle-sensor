@@ -1,4 +1,6 @@
-with open("subaru-sas-swapped-order.bin", "rb") as input_file:
+# feed this binary file with the byte order swapped
+import sys
+with open(sys.argv[1], "rb") as input_file:
     bytes_data = input_file.read()
 
 word_data_swapped = []
