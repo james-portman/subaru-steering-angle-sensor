@@ -47,7 +47,13 @@ I would think there might be a way to clear this fault by using a diagnostic cab
 
 ## Fixing the fault code
 
-Open up the sensor, use an eeprom programmer and an 8-pin clip for SOIC chips, read the data and save a backup file, if you have a pattern similar to 5a5aa5a5 near the top then change that to all ff's and write that back
+Open up the sensor, use an eeprom programmer and an 8-pin clip for SOIC chips, read the data and save a backup file
+Make sure you have selected the correct chip in your eeprom programmer, if you don't then it might still read something but it could be incorrect, see example file just below for an idea.
+
+If you have a pattern similar to 5a5aa5a5 near the top then change that to all ff's and write that back. Some other patterns have been seen but they are always in the same place as the example file:
+
+See example file for an idea of a good read: [File read](/text).
+
 
 Open sensor:
 
