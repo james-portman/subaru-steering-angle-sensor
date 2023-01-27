@@ -66,14 +66,11 @@ Back side of PCB with eeprom chip marked:
 
 ## Further investigation
 
-Looking at the rest of the data on the steering angle sensor eeprom, it seems like there are two lookup tables
+Looking at the rest of the data on the steering angle sensor eeprom, there are two lookup tables
 
-Graphing those it actually looks like a sin and cos wave, although it could be a way to look up the car wheel angle vs steering wheel angle
-They do differ slightly between different cars
+Otherwise there are at least 2 other pieces of data in the sensors.
+They are pairs of words which add up to 0xFFFF
 
-Otherwise there are at least 2 other pieces of valid data in the sensors which could simply be the steering ratio
-
-I have seen people making complicated add-on systems to correct the steering angle sensor data when they have fitted a steering rack with a different ratio, I would think you can do the same thing here by just editing the steering angle sensor maps to match a sensor from whatever car your rack is made for
 
 Sensor data for a mixture of cars:
 
