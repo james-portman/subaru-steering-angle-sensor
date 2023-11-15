@@ -1,5 +1,11 @@
 # subaru-steering-angle-sensor - SAS
 
+## Repair service
+
+Have a read of the page first but if you would like me to fix your steering angle sensor rather than trying to do it yourself, then please visit the following link to purchase the service;
+[https://shop.jmpe.co.uk/products/subaru-steering-angle-sensor-repair-service](https://shop.jmpe.co.uk/products/subaru-steering-angle-sensor-repair-service)
+
+
 ## Sensor
 
 This applies to at least Hawkeye era steering angle sensors - vaguely 2006 year cars, it could apply to many more
